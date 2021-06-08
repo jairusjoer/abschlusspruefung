@@ -1,0 +1,345 @@
+$width-mobile: 576px;
+$width-tablet: 768px;
+$width-desktop: 1024px;
+
+@font-face {
+  font-family: "General Sans";
+  src: url("./assets/fonts/GeneralSans-Variable.woff2") format("woff2"),
+    url("./assets/fonts/GeneralSans-Variable.woff") format("woff"),
+    url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("./assets/fonts/Satoshi-Variable.woff") format("woff"),
+    url("./assets/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --color-back: #f0f0f0;
+  --color-front: #ffffff;
+  --color-text: #707070;
+  --color-full: #000000;
+  --color-brand: #8b6b61;
+
+  &.dark {
+    --color-back: #181818;
+    --color-front: #282828;
+    --color-text: #a8a8a8;
+    --color-full: #ffffff;
+  }
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "General Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: var(--color-back);
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+footer {
+  margin-top: auto;
+}
+
+img {
+  image-rendering: optimizeQuality;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+
+  + p {
+    margin-top: 1.5rem;
+  }
+}
+
+p {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: url("./assets/images/hero-aufnahme-pflege.jpg");
+  color: #ffffff;
+  padding: 1.5rem;
+
+  &-subtitle {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+  }
+
+  &-title {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    font-weight: 900;
+  }
+
+  &-caption {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    width: max-content;
+
+    &-top,
+    &-bottom {
+      color: #ffffff;
+    }
+
+    &-line {
+      height: 1px;
+      width: 100%;
+      background-color: #ffffff;
+      margin: 0.75rem 0;
+    }
+  }
+
+  &-buttons {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+
+    &-primary {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    &-secondary {
+      border: 1px solid #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+}
+
+/* Anniversary ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
+.anniversary {
+  @media (min-width: $width-desktop) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  &-title,
+  &-content {
+    padding: 1.5rem;
+
+    @media (min-width: $width-tablet) {
+      border-radius: 0.25rem;
+    }
+  }
+
+  &-title {
+    background-color: var(--color-brand);
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @media (min-width: $width-desktop) {
+      position: relative;
+      z-index: 10;
+      grid-column: 1/6;
+      grid-row: 2;
+    }
+  }
+
+  &-image {
+    @media (min-width: $width-tablet) {
+      border-radius: 0.25rem;
+    }
+
+    @media (min-width: $width-desktop) {
+      grid-row: 1/-1;
+      grid-column: 4/-1;
+    }
+  }
+
+  &-content {
+    background-color: var(--color-front);
+    border-radius: 0.25rem;
+
+    @media (min-width: $width-desktop) {
+      position: relative;
+      z-index: 10;
+      grid-column: 1/5;
+      grid-row: 3;
+    }
+
+    &-subtitle {
+      font-family: "General Sans";
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &-caption {
+      margin-top: 0.5rem;
+      font-family: "General Sans";
+      font-weight: 600;
+      font-weight: 1.125rem;
+      line-height: 1.5rem;
+    }
+
+    &-text {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+/* Milestones ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
+.milestones {
+  margin-top: 6rem;
+
+  &-title {
+    padding: 0 1.5rem;
+    font-size: 2.625rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .glide {
+    margin-top: 3rem;
+    width: 100vw;
+
+    &__slide {
+      display: flex;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    &__bullets {
+      margin-top: 1.5rem;
+      display: flex;
+    }
+
+    &__bullet {
+      width: 100%;
+      height: 0.125rem;
+      background: var(--color-text);
+
+      &--active {
+        @extend .glide__bullet;
+        background: var(--color-full);
+      }
+
+      &:nth-child(n + 2) {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+    padding: 1.5rem;
+
+    &-headline {
+      background-color: var(--color-brand);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      width: max-content;
+    }
+
+    &-text {
+      background-color: var(--color-front);
+      border-radius: 0.25rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+}
+
+/* Services ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
+.services {
+  @extend .milestones;
+
+  &-title {
+    @extend .milestones-title;
+  }
+
+  &-subtitle {
+    margin-top: 0.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &-content {
+    display: grid;
+    gap: .75rem;
+
+    &-item {
+      padding: 3rem 4.5rem;
+    }
+  }
+}

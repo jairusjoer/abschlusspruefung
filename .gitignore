@@ -1,0 +1,29 @@
+## IDEs
+.phpintel/*
+.idea/
+!.idea/vagrant*
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX files
+._*
+.DS_Store
+
+# NPM
+node_modules/
+package-lock.json
+
+# Yarn
+.yarn/
+yarn.lock
+
+# Snowpack
+.cache
+release/
+
+# Dependencies
+.eslintcache
