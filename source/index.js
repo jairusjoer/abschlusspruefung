@@ -1,9 +1,28 @@
-import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-
-new Glide(".glide", {
-  gap: 24
+// MILESTONES SlIDER
+new Glide(".milestones-glide", {
+  type: "carousel",
+  gap: 24,
 }).mount();
+
+// COMMENTS SLIDER
+new Glide(".comments-glide", {
+  type: "carousel",
+  autoplay: 3000,
+  gap: 24,
+  peek: 216,
+  breakpoints: {
+    768: {
+      peek: 48,
+    },
+  },
+}).mount();
+
+const nav = document.getElementsByTagName("nav")[0];
+const body = document.getElementsByTagName("body")[0];
+document.getElementById("toggleMenu").onclick = () => {
+  nav.classList.toggle("open");
+  body.classList.toggle("noscroll");
+};
 
 /* FEATURE: DARK MODE
 const body = document.getElementsByTagName("body")[0];
@@ -20,12 +39,5 @@ document.getElementById("toggleState").onclick = () => {
     localStorage.setItem("mode", "dark");
   }
   body.classList.toggle("dark");
-};
-*/
-
-/* FEATURE: NAVIGATION
-const nav = document.getElementsByTagName("nav")[0];
-document.getElementById("toggleMenu").onclick = () => {
-  nav.classList.toggle("open");
 };
 */

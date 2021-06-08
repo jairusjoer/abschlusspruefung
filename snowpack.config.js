@@ -7,9 +7,9 @@ module.exports = {
   optimize: {
     entrypoints: ["source/index.html"],
     sourcemap: false,
-    splitting: true,
+    splitting: false,
     treeshake: true,
-    minify: true,
+    minify: false,
     target: "es2017",
   },
   */

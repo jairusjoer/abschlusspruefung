@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Schuhmanufaktur Formschön" />
-    <meta name="description" content="Project Description" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="Project URL" />
-    <meta property="og:title" content="Schuhmanufaktur Formschön" />
-    <meta property="og:description" content="Project Description" />
-    <meta property="twitter:url" content="Project URL" />
-    <meta property="twitter:title" content="Schuhmanufaktur Formschön" />
-    <meta property="twitter:description" content="Project Description" />
-    <title>Schuhmanufaktur Formschön</title>
-    <link rel="stylesheet" href="./index.css" />
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Schuhmanufaktur Formschön" />
+  <meta name="description" content="Project Description" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="Project URL" />
+  <meta property="og:title" content="Schuhmanufaktur Formschön" />
+  <meta property="og:description" content="Project Description" />
+  <meta property="twitter:url" content="Project URL" />
+  <meta property="twitter:title" content="Schuhmanufaktur Formschön" />
+  <meta property="twitter:description" content="Project Description" />
+  <title>Schuhmanufaktur Formschön</title>
+  <!--
       Verwendete Schriften:
       - Satoshi: https://www.fontshare.com/fonts/satoshi
       - General Sans: https://www.fontshare.com/fonts/general-sans
     -->
-  </head>
-  <body class="home">
-    <navigation class="navigation"></navigation>
-    <header class="header">
+  <link rel="stylesheet" href="./assets/scripts/glide.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="home">
+  <nav class="navigation">
+    <a href="#start" class="navigation-logo">
+      <img src="./assets/images/logo-formschoen-icon.svg" alt="" class="navigation-logo-item">
+      <img src="./assets/images/logo-formschoen-text.svg" alt="" class="navigation-logo-item">
+    </a>
+    <img id="toggleMenu" src="./assets/images/icon-menu.svg" alt="" class="navigation-icon">
+    <div class="navigation-menu">
+      <a href="#jubilaeum" class="navigation-menu-item">Jubiläum</a>
+      <a href="#chronologie" class="navigation-menu-item">Chronologie</a>
+      <a href="#leistungen" class="navigation-menu-item">Leistungen</a>
+      <a href="#maßschuhe" class="navigation-menu-item">Maßschuhe</a>
+      <a href="#pflegetipps" class="navigation-menu-item">Pflegetipps</a>
+      <a href="#stimmen" class="navigation-menu-item">Stimmen</a>
+      <a href="#kontakt" class="navigation-menu-item">Öffnungszeiten</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <header id="start" class="header">
       <h2 class="header-subtitle">Schuhmanufaktur</h2>
       <h1 class="header-title">Formschön</h1>
       <div class="header-caption">
@@ -31,132 +51,323 @@
         <hr class="header-caption-line" />
         <p class="header-caption-bottom">Bad Godesberg</p>
       </div>
-      <div class="header-buttons">
-        <a href="#kontakt" class="header-buttons-primary">Kontakt aufnehmen</a>
-        <a href="#kontakt" class="header-buttons-secondary">Öffnungszeiten</a>
-      </div>
+      <a href="#kontakt" class="header-button">Kontakt aufnehmen</a>
     </header>
 
-    <main class="main">
-      <section id="jubilaeum" class="anniversary">
-        <h2 class="anniversary-title">20 Jahre Schuhmanufaktur Formschön</h2>
-        <img
-          src="./assets/images/anniversary-aufnahme-mann.jpg"
-          alt=""
-          class="anniversary-image"
-        />
-        <div class="anniversary-content">
-          <h3 class="anniversary-content-subtitle">
-            Immer einen Schritt voraus
-          </h3>
-          <h4 class="anniversary-content-caption">Feiern Sie mit uns!</h4>
-          <p class="anniversary-content-text">
-            Im September 2001 eröffneten wir Geschwister, Maria Gracia und Paolo
-            Zuretti, in Bad Godesberg unsere Schuhmanufaktur. Zuvor hatten wir
-            beide den Meisterbrief erworben und mehrere Jahre in verschiedenen
-            Werkstätten Berufserfahrung gesammelt. Im September 2021 feiern wir
-            also das 20-jährige Bestehen unserer Manufaktur. Wir freuen uns auf
-            Ihren Besuch – ob online oder direkt in der Alten Bahnhofstraße 5a
-            in Bonn-Bad Godesberg.
+    <section id="jubilaeum" class="anniversary">
+      <h2 class="anniversary-title">20 Jahre Schuhmanufaktur Formschön</h2>
+      <img src="./assets/images/anniversary-aufnahme-mann.jpg" alt="" class="anniversary-image" />
+      <div class="anniversary-content">
+        <h3 class="anniversary-content-subtitle">
+          Immer einen Schritt voraus
+        </h3>
+        <h4 class="anniversary-content-caption">Feiern Sie mit uns!</h4>
+        <p class="anniversary-content-text">
+          Im September 2001 eröffneten wir Geschwister, Maria Gracia und Paolo
+          Zuretti, in Bad Godesberg unsere Schuhmanufaktur. Zuvor hatten wir
+          beide den Meisterbrief erworben und mehrere Jahre in verschiedenen
+          Werkstätten Berufserfahrung gesammelt. Im September 2021 feiern wir
+          also das 20-jährige Bestehen unserer Manufaktur. Wir freuen uns auf
+          Ihren Besuch – ob online oder direkt in der Alten Bahnhofstraße 5a
+          in Bonn-Bad Godesberg.
+        </p>
+      </div>
+    </section>
+
+    <section id="chronologie" class="milestones">
+      <h2 class="milestones-title">Meilensteine</h2>
+      <div class="milestones-glide glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="./assets/images/slide-1-schuhe.jpg" alt="" class="milestones-image" />
+              <div class="milestones-content">
+                <h3 class="milestones-content-headline">Headline</h3>
+                <p class="milestones-content-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Eaque eum pariatur explicabo cumque assumenda dicta, magnam
+                  aperiam dolore quaerat quas consequatur saepe fugit alias.
+                  Fugit deleniti sed perspiciatis repudiandae optio.
+                </p>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <img src="./assets/images/slide-1-schuhe.jpg" alt="" class="milestones-image" />
+              <div class="milestones-content">
+                <h3 class="milestones-content-headline">Headline</h3>
+                <p class="milestones-content-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Eaque eum pariatur explicabo cumque assumenda dicta, magnam
+                  aperiam dolore quaerat quas consequatur saepe fugit alias.
+                  Fugit deleniti sed perspiciatis repudiandae optio.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="services">
+      <h2 class="services-title">Wir lieben Leder</h2>
+      <h3 class="services-subtitle">Das leisten wir für Sie:</h3>
+      <div class="services-content">
+        <div class="services-content-item">
+          <img src="./assets/images/item-1-naehen-2.jpg" alt="" class="services-content-item-image" />
+          <h4 class="services-content-item-headline">Reparieren</h4>
+          <p class="services-content-item-text">
+            Kommen Sie mit hochwertigen Lederwaren zu uns, wenn etwas kaputt
+            ist. Wie zum Beispiel: ein eingerissener Riemen am Rucksack, ein
+            Reißverschluss an der Tasche, der sich verhakt hat, schief
+            getretene Stiefelsohlen, ein locker gewordener Schuhabsatz. Der
+            Erhalt von schönen, Ihnen lieb gewordenen Qualitätswaren ist uns
+            ein Anliegen. Wegwerfen war gestern!
           </p>
         </div>
-      </section>
 
-      <section id="meilensteine" class="milestones">
-        <h2 class="milestones-title">Meilensteine</h2>
-        <div class="glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="glide__slide">
-                <img
-                  src="./assets/images/slide-1-schuhe.jpg"
-                  alt=""
-                  class="milestones-image"
-                />
-                <div class="milestones-content">
-                  <h3 class="milestones-content-headline">Headline</h3>
-                  <p class="milestones-content-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eaque eum pariatur explicabo cumque assumenda dicta, magnam
-                    aperiam dolore quaerat quas consequatur saepe fugit alias.
-                    Fugit deleniti sed perspiciatis repudiandae optio.
-                  </p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <img
-                  src="./assets/images/slide-1-schuhe.jpg"
-                  alt=""
-                  class="milestones-image"
-                />
-                <div class="milestones-content">
-                  <h3 class="milestones-content-headline">Headline</h3>
-                  <p class="milestones-content-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eaque eum pariatur explicabo cumque assumenda dicta, magnam
-                    aperiam dolore quaerat quas consequatur saepe fugit alias.
-                    Fugit deleniti sed perspiciatis repudiandae optio.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-          </div>
+        <div class="services-content-item">
+          <img src="./assets/images/item-2-naehen.jpg" alt="" class="services-content-item-image" />
+          <h4 class="services-content-item-headline">Verbessern</h4>
+          <p class="services-content-item-text">
+            Scheuen Sie sich nicht, auch mit guten, industriell gefertigten
+            Qualitätsschuhen zu uns zu kommen, wenn Sie spezielle
+            Anpassungswünsche haben. Wie zum Beispiel: Schuhe weiten,
+            Stiefelschäfte kürzen, Spezialsohlen anbringen,
+            Beinlängen-Differenz ausgleichen, Absätze erhöhen. Es ist uns
+            wichtig, dass Ihre Füße eine passgenaue Bekleidung haben.
+            Schmerzen sind vermeidbar.
+          </p>
         </div>
-      </section>
 
-      <section id="leistungen" class="services">
-        <h2 class="services-title">Wir lieben Leder</h2>
-        <h3 class="services-subtitle">Das leisten wir für Sie:</h3>
-        <div class="milestones-content">
-          <div class="milestones-content-item">
-            <h4 class="milestones-content-item-headline">Reparieren</h4>
-            <p class="milestones-content-item-text">
-              Kommen Sie mit hochwertigen Lederwaren zu uns, wenn etwas kaputt
-              ist. Wie zum Beispiel: ein eingerissener Riemen am Rucksack, ein
-              Reißverschluss an der Tasche, der sich verhakt hat, schief
-              getretene Stiefelsohlen, ein locker gewordener Schuhabsatz. Der
-              Erhalt von schönen, Ihnen lieb gewordenen Qualitätswaren ist uns
-              ein Anliegen. Wegwerfen war gestern!
-            </p>
-          </div>
-
-          <div class="milestones-content-item">
-            <h4 class="milestones-content-item-headline">Verbessern</h4>
-            <p class="milestones-content-item-text">
-              Scheuen Sie sich nicht, auch mit guten, industriell gefertigten
-              Qualitätsschuhen zu uns zu kommen, wenn Sie spezielle
-              Anpassungswünsche haben. Wie zum Beispiel: Schuhe weiten,
-              Stiefelschäfte kürzen, Spezialsohlen anbringen,
-              Beinlängen-Differenz ausgleichen, Absätze erhöhen. Es ist uns
-              wichtig, dass Ihre Füße eine passgenaue Bekleidung haben.
-              Schmerzen sind vermeidbar.
-            </p>
-          </div>
-
-          <div class="milestones-content-item">
-            <h4 class="milestones-content-item-headline">Kreieren</h4>
-            <p class="milestones-content-item-text">
-              Sprechen Sie uns an, wenn Sie exklusive Schuhe tragen wollen,
-              Modelle nach Ihren modischen Vorstellungen und der Eigenart Ihrer
-              Füße. Neben der Fertigung individueller Maßschuhe gibt es auch
-              kostengünstigere Varianten, wie etwa die Maßkonfektion mit
-              vielfältigen Wahlmöglichkeiten. Zögern Sie nicht!
-            </p>
-          </div>
+        <div class="services-content-item">
+          <img src="./assets/images/item-3-formgebung.jpg" alt="" class="services-content-item-image" />
+          <h4 class="services-content-item-headline">Kreieren</h4>
+          <p class="services-content-item-text">
+            Sprechen Sie uns an, wenn Sie exklusive Schuhe tragen wollen,
+            Modelle nach Ihren modischen Vorstellungen und der Eigenart Ihrer
+            Füße. Neben der Fertigung individueller Maßschuhe gibt es auch
+            kostengünstigere Varianten, wie etwa die Maßkonfektion mit
+            vielfältigen Wahlmöglichkeiten. Zögern Sie nicht!
+          </p>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer"></footer>
+    <section id="maßschuhe" class="custom">
+      <h2 class="custom-title">Der Weg zu Ihrem Maßschuh</h2>
+      <div class="custom-content">
+        <img src="./assets/images/custom-auszubildender.jpg" alt="" class="custom-content-image" />
+        <ul class="custom-content-list">
+          <li class="custom-content-list-item"><i>1</i>Fußvermessung</li>
+          <li class="custom-content-list-item"><i>2</i>Auswahl von Farbe und Form</li>
+          <li class="custom-content-list-item"><i>3</i>Entscheidung fürs Leder</li>
+          <li class="custom-content-list-item"><i>4</i>Herstellung des Leistens</li>
+          <li class="custom-content-list-item">
+            <i>5</i>Fertigung des Schuhs – Teil I
+          </li>
+          <li class="custom-content-list-item"><i>6</i>Anprobe</li>
+          <li class="custom-content-list-item">
+            <i>7</i>Fertigung des Schuhs – Teil II
+          </li>
+          <li class="custom-content-list-item"><i>8</i>Anpassungen und Feinarbeiten</li>
+        </ul>
+        <p class="custom-content-text">
+          Der zeitliche Aufwand bei der Herstellung Ihrer individuellen
+          Maßschuhe kann beträchtlich variieren, je nach Modell, Machart und
+          Sonderwünschen. Wir rechnen mit mindestens 30 Arbeitsstunden. Der
+          gesamte Arbeitsprozess zieht sich in der Regel über acht Wochen hin.
+          <br /><br />
+          Dreimal sind Sie in dieser Zeit gefragt: Beim Vermessen und Wählen des
+          Modells, bei einer ersten Anprobe und schließlich am Tag der
+          Fertigstellung.
+          <br /><br />
+          Rechnen Sie pro Paar mit einem Preis zwischen 2000,– und 3000,– Euro.
+          Sobald wir einen fußgerechten Leisten für Sie gefertigt haben, können
+          wir ihn für alle Nachfolgemodelle nutzen – und Sie sparen bares Geld.
+          Damenschuhe sind in der Regel aufwendiger und daher etwas teurer als
+          Modelle für den Herrn.
+        </p>
+      </div>
+    </section>
 
-    <script src="./index.js" type="module"></script>
-    <!--
+    <section id="pflegetipps" class="tips">
+      <h2 class="tips-title">Ihren Füßen zuliebe</h2>
+      <ul class="tips-list">
+        <li class="tips-list-item">
+          <i>1</i>Verwenden Sie Streckleisten aus Holz und spannen Sie Ihre
+          Schuhe ein, solange sie vom Tragen noch warm und geschmeidig sind.
+        </li>
+        <li class="tips-list-item">
+          <i>2</i>Verwenden Sie nicht jeden Tag dasselbe Paar. Gute Schuhe
+          wollen ausruhen dürfen.
+        </li>
+        <li class="tips-list-item">
+          <i>3</i>Bewahren Sie Schuhe in einem Schrank mit Lüftungsschlitzen
+          auf.
+        </li>
+        <li class="tips-list-item">
+          <i>4</i>Pflegen Sie das Oberleder ab und zu mit einem flüssigen
+          Reiniger. Achten Sie bei Lack- und Rauleder auf spezielle
+          Pflegemittel.
+        </li>
+        <li class="tips-list-item">
+          <i>5</i>Stopfen Sie nass gewordene Schuhe mit Zeitungspapier aus,
+          entfernen Sie weiße Ränder mit warmem Wasser.
+        </li>
+        <li class="tips-list-item">
+          <i>6</i>Verwenden Sie nach der Fleckenentfernung passende
+          Pflegemittel. Wir beraten Sie gerne.
+        </li>
+        <li class="tips-list-item">
+          <i>7</i>Entfernen Sie vor dem Pflegen die Schnürsenkel.
+        </li>
+        <li class="tips-list-item">
+          <i>8</i>Polieren Sie ausgiebig. Fragen Sie uns nach den richtigen
+          Bürsten.
+        </li>
+        <li class="tips-list-item">
+          <i>9</i>Stecken Sie Ihre Schuhe auf Reisen in luftdurchlässige
+          Beutel.
+        </li>
+        <li class="tips-list-item">
+          <i>10</i>Verwenden Sie immer einen Schuhlöffel.
+        </li>
+      </ul>
+    </section>
+
+    <section id="stimmen" class="comments">
+      <h2 class="comments-title">Das sagen unsere Kund*innen:</h2>
+      <div class="comments-glide glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <p class="comments-item">
+                Ich weiß nicht, wie viel Zeit ich immer damit vertan habe,
+                Schuhe zu finden, die mir sowohl gefielen als auch wirklich
+                gut passten. Meistens entschied ich mich dann für etwas
+                optisch Ansprechendes und nahm dafür Schmerzen an den Füßen in
+                Kauf. Damit ist nun Schluss.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Mir kommt es aufs Preis-Leistungs-Verhältnis an. Und das
+                stimmt bei „Formschön“.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Ich bin 16 Stunden am Tag im wahrsten Sinn des Wortes auf den
+                Füßen. Und da merkt man schnell, welches Schuhwerk man trägt.
+                Seit ich einmal gemerkt habe, welchen Unterschied es macht, ob
+                die Schuhe wie angegossen passen oder nicht, ist für mich
+                klar: Die Maßschuhe von Formschön sind ihren Preis wert.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Ich komme gerne in die Maßschuhmacherei Formschön, weil mir
+                die Atmosphäre gefällt und weil ich mich immer gut beraten
+                fühle.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Ich hasse das Einkaufen. Und deshalb bin ich froh, dass es die
+                Schuhmanufaktur Formschön gibt. Dort weiß ich, was ich für
+                mein Geld bekomme. Außerdem hält ein Paar Maßschuhe einfach
+                lange – und erspart es mir, laufend wieder auswählen und
+                anprobieren zu müssen.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Wenn ich all diese Plastikschuhe in den üblichen Auslagen
+                sehe, denke ich: Welche Materialvergeudung! Da sind
+                handgefertigte Schuhe doch viel nachhaltiger.
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Maßschuhe kann ich mir nicht leisten. Zum Glück habe ich ein
+                unproblematisches Paar Füße, für die ich leicht hochwertige
+                Konfektionsschuhe finde. Sie müssen zeitlos gut aussehen und
+                aus bestem Leder gefertigt sein. Dann bringe ich sie im Laufe
+                der Jahre immer mal wieder zur Schuhmanufaktur Formschön, wenn
+                Absätze repariert oder neue Sohlen aufgebracht werden müssen.
+                Das lohnt sich!
+              </p>
+            </li>
+            <li class="glide__slide">
+              <p class="comments-item">
+                Einmal habe ich einen sehr passenden Spruch gehört: „Wer
+                billigt kauft, zahlt doppelt!“
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+      <div class="contact-item">
+        <h3 class="contact-item-headline">Öffnungszeiten</h3>
+        <ul class="contact-item-list">
+          <li class="contact-item-list-item">
+            <span>Montag – Freitag</span><span>9 – 17 Uhr</span>
+          </li>
+          <li class="contact-item-list-item">
+            <span>Samstag</span> <span>10 – 15 Uhr</span>
+          </li>
+        </ul>
+        <p class="contact-item-text">und nach Vereinbarung</p>
+      </div>
+      <div class="contact-item">
+        <h3 class="contact-item-headline">Kontakt</h3>
+        <p class="contact-item-text">
+          <a href="mailto:info@schuhmanufaktur-formschön.de">info@schuhmanufaktur-formschön.de</a>
+          <a href="www.schuhmanufaktur-formschön.de">www.schuhmanufaktur-formschön.de</a>
+          <br /><br />
+          Tel.: 0228-123450 Fax: 0228-123459
+        </p>
+      </div>
+      <div class="contact-item">
+        <h3 class="contact-item-headline">Anschrift</h3>
+        <p class="contact-item-text">
+          Schuhmanufaktur Formschön GmbH<br />
+          Alte Bahnhofstraße 5a<br />
+          53173 Bonn-Bad Godesberg
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-social">
+      <a class="footer-social-link" target="_blank" href="">
+        <img src="./assets/images/icon-facebook.svg" alt="" class="footer-social-link-icon" /></a>
+      <a class="footer-social-link" target="_blank" href="">
+        <img src="./assets/images/icon-instagram.svg" alt="" class="footer-social-link-icon" /></a>
+      <a class="footer-social-link" target="_blank" href=""><img src="./assets/images/icon-snapchat.svg" alt=""
+          class="footer-social-link-icon" /></a>
+      <a class="footer-social-link" target="_blank" href="">
+        <img src="./assets/images/icon-youtube.svg" alt="" class="footer-social-link-icon" /></a>
+    </div>
+    <div class="footer-legal">
+      <a href="./datenschutz.html" class="footer-legal-link">Datenschutz</a>
+      <a href="./impressum.html" class="footer-legal-link">Impressum</a>
+    </div>
+  </footer>
+  <!--
       Verwendete Bibliotheken:
       - Glide.js v3.4.1: https://glidejs.com/
     -->
-  </body>
+  <script src="./assets/scripts/glide.js"></script>
+  <script defer src="./index.js"></script>
+</body>
+
 </html>
