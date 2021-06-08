@@ -68,6 +68,7 @@ body {
 main {
   margin: 0 auto;
   max-width: 1440px;
+  width: 100%;
 }
 
 footer {
@@ -77,6 +78,7 @@ footer {
 img {
   image-rendering: optimizeQuality;
   object-fit: cover;
+  object-position: center;
   position: relative;
   width: 100%;
   height: auto;
@@ -162,25 +164,36 @@ a {
     @media (min-width: $width-tablet) {
       padding: 1.5rem 0;
     }
+
+    @media (min-width: $width-desktop) {
+      display: none;
+    }
   }
 
   &-menu {
     display: none;
+    flex-direction: column;
+    padding: 3rem 0;
+    width: 100%;
+    max-height: calc(100vh - 3rem);
+    overflow: scroll;
+
+    @media (min-width: $width-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      border-top: 1px solid var(--color-back);
+      padding: 0;
+    }
 
     .open > & {
       display: flex;
-      flex-direction: column;
-      padding: 1.5rem 0;
-      width: 100%;
-      height: calc(100vh - 3rem);
-      overflow: scroll;
+    }
 
-      @media (min-width: $width-tablet) {
-        border-top: 1px solid var(--color-back);
-        justify-content: space-between;
-        height: auto;
-        flex-direction: row;
-      }
+    @media (min-width: $width-desktop) {
+      display: flex;
+      width: auto;
+      border-top: none;
+      justify-content: flex-end;
     }
 
     &-item {
@@ -191,7 +204,8 @@ a {
 
       @media (min-width: $width-tablet) {
         font-size: 0.875rem;
-        line-height: 1rem;
+        line-height: 1.5rem;
+        padding: 1.5rem 0;
       }
 
       &:nth-child(n + 2) {
@@ -217,6 +231,10 @@ a {
   background-image: url("./assets/images/hero-aufnahme-pflege.jpg");
   color: #ffffff;
   padding: 1.5rem;
+
+  @media (min-width: $width-desktop) {
+    min-height: 720px;
+  }
 
   &-subtitle {
     font-weight: 300;
@@ -288,9 +306,8 @@ a {
 /* Anniversary ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 
 .anniversary {
-  margin-top: 6rem;
-
   @media (min-width: $width-tablet) {
+    margin-top: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 1.5rem;
@@ -298,6 +315,7 @@ a {
   }
 
   @media (min-width: $width-desktop) {
+    margin-top: 9rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
   }
@@ -376,6 +394,10 @@ a {
 .milestones {
   margin-top: 6rem;
 
+  @media (min-width: $width-desktop) {
+    margin-top: 9rem;
+  }
+
   &-title {
     padding: 0 1.5rem;
     font-size: 2.625rem;
@@ -387,11 +409,12 @@ a {
     margin-top: 3rem;
     width: 100vw;
     max-width: 1440px;
+    cursor: grab;
 
     .glide__slide {
       display: flex;
       position: relative;
-      min-height: 100vh;
+      min-height: 50vh;
 
       @media (min-width: $width-tablet) {
         min-height: 480px;
@@ -464,6 +487,10 @@ a {
     padding: 0 1.5rem;
   }
 
+  @media (min-width: $width-desktop) {
+    margin-top: 9rem;
+  }
+
   &-title {
     @extend .milestones-title;
   }
@@ -481,11 +508,16 @@ a {
   &-content {
     margin-top: 3rem;
     display: grid;
-    gap: 0.5rem;
+    gap: 0.25rem;
 
     @media (min-width: $width-tablet) {
       border-radius: 0.25rem;
       overflow: hidden;
+    }
+
+    @media (min-width: $width-tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
     }
 
     &-item {
@@ -496,6 +528,10 @@ a {
         position: absolute;
         inset: 0;
         height: 100%;
+
+        @media (min-width: $width-tablet) {
+          border-radius: 0.25rem;
+        }
       }
 
       &-headline,
@@ -513,6 +549,9 @@ a {
 
       &-text {
         font-weight: 300;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
@@ -538,10 +577,20 @@ a {
       gap: 1.5rem 0.75rem;
     }
 
+    @media (min-width: $width-desktop) {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(5, auto);
+    }
+
     &-image {
       @media (min-width: $width-tablet) {
         height: 100%;
         border-radius: 0.25rem;
+      }
+
+      @media (min-width: $width-desktop) {
+        grid-column: 4/12;
+        grid-row: 1/5;
       }
     }
 
@@ -549,6 +598,12 @@ a {
       @media (min-width: $width-tablet) {
         grid-row: 1;
         grid-column: 1;
+        z-index: 10;
+      }
+
+      @media (min-width: $width-desktop) {
+        grid-row: 2;
+        grid-column: 1/5;
       }
 
       &-item {
@@ -590,7 +645,14 @@ a {
       background-color: var(--color-front);
 
       @media (min-width: $width-tablet) {
+        border-radius: 0.25rem;
         grid-column: 1/-1;
+      }
+
+      @media (min-width: $width-desktop) {
+        grid-column: 7/-1;
+        grid-row: 3/-1;
+        z-index: 10;
       }
     }
   }
@@ -612,6 +674,10 @@ a {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.75rem 1.5rem;
+    }
+
+    @media (min-width: $width-desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
     &-item {
       @extend .custom-content-list-item;
@@ -645,16 +711,21 @@ a {
   &-glide {
     width: 100vw;
     max-width: 1440px;
+    cursor: grab;
 
     .glide__slides {
-      padding: 3rem 0;
+      padding: 3rem 0 6rem;
+
+      @media (min-width: $width-tablet) {
+        padding: 3rem 0 9rem;
+      }
     }
 
     .glide__slide {
       margin: auto 0;
-      filter: blur(.125rem);
+      filter: blur(0.125rem);
       transition: all 200ms;
-      opacity: .666;
+      opacity: 0.666;
 
       &--active {
         filter: blur(0);
@@ -678,8 +749,10 @@ a {
 
 .contact {
   @extend .services;
+  margin-top: 0;
   display: grid;
   gap: 0.25rem;
+  margin-bottom: 3rem;
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -729,7 +802,6 @@ a {
 
 .footer {
   background-color: var(--color-front);
-  margin-top: 3rem;
   padding: 0.75rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -766,6 +838,45 @@ a {
           margin: 0 0.5rem;
           color: var(--color-full);
         }
+      }
+    }
+  }
+}
+
+.imprint {
+  max-width: 1440px;
+  width: 100%;
+  margin: 3rem 0;
+
+  @media (min-width: $width-tablet) {
+    padding: 0 1.5rem;
+  }
+
+  &-content {
+    background-color: var(--color-front);
+
+    @media (min-width: $width-tablet) {
+      border-radius: 0.25rem;
+    }
+    &-title {
+      background-color: var(--color-brand);
+      color: #ffffff;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding-right: 9rem;
+
+      @media (min-width: $width-tablet) {
+        border-radius: 0.25rem;
+      }
+    }
+    &-text {
+      padding: 3rem 1.5rem;
+      margin-top: 0;
+      strong {
+        font-weight: 700;
+        font-family: "Satoshi", sans-serif;
+        color: var(--color-full);
       }
     }
   }
