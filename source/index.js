@@ -12,3 +12,19 @@ for (const item of link) {
     nav.classList.toggle("open");
   };
 }
+
+// Dark modee
+// Check available local storage
+if (localStorage.getItem("mode") == "dark") {
+  body.classList.toggle("dark");
+}
+// Toggle state on click event
+document.getElementById("toggleState").onclick = () => {
+  // Check and update current state
+  if (localStorage.getItem("mode") == "dark") {
+    localStorage.setItem("mode", "light");
+  } else {
+    localStorage.setItem("mode", "dark");
+  }
+  body.classList.toggle("dark");
+};
